@@ -1650,3 +1650,1248 @@ export const questions: Question[] = [
     explanation: "Sveriges nationaldag firas den 6 juni."
   }
 ];
+{
+  id: 101,
+  topic: "Lag och rätt",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En 14-åring begår ett brott. Vem ansvarar normalt för åtgärder kring barnet?",
+  options: ["Riksdagen", "Socialtjänsten", "EU", "Regionen"],
+  correctAnswer: 1,
+  explanation: "Barn under straffmyndighetsåldern hanteras normalt av socialtjänsten."
+},
+{
+  id: 102,
+  topic: "Lag och rätt",
+  difficulty: "medium",
+  type: "scenario",
+  question: "Fatima misstänks för ett brott. Vem avgör om åtal ska väckas?",
+  options: ["Polisen", "Domaren", "Åklagaren", "Kommunen"],
+  correctAnswer: 2,
+  explanation: "Det är åklagaren som beslutar om åtal ska väckas."
+},
+{
+  id: 103,
+  topic: "Demokrati",
+  difficulty: "easy",
+  type: "scenario",
+  question: "Ali fyller 18 år veckan före valet. Får han rösta?",
+  options: ["Ja", "Nej", "Bara i kommunval", "Bara i EU-val"],
+  correctAnswer: 0,
+  explanation: "Personer som fyllt 18 år och uppfyller övriga krav har rösträtt."
+},
+{
+  id: 104,
+  topic: "Mänskliga rättigheter",
+  difficulty: "medium",
+  type: "scenario",
+  question: "En arbetsgivare väljer bort en sökande på grund av religion. Vad kan detta vara?",
+  options: ["Yttrandefrihet", "Diskriminering", "Demokrati", "Kollektivavtal"],
+  correctAnswer: 1,
+  explanation: "Diskriminering på grund av religion är förbjuden enligt lag."
+},
+{
+  id: 105,
+  topic: "Medier",
+  difficulty: "medium",
+  type: "scenario",
+  question: "En journalist begär ut dokument från en myndighet. Vilken princip stödjer detta?",
+  options: ["Religionsfriheten", "Offentlighetsprincipen", "Värnplikten", "Rösträtten"],
+  correctAnswer: 1,
+  explanation: "Offentlighetsprincipen ger insyn i myndigheters handlingar."
+},
+{
+  id: 106,
+  topic: "Arbetsmarknad",
+  difficulty: "medium",
+  type: "scenario",
+  question: "Sara vill ha hjälp i en konflikt med sin arbetsgivare. Vilken organisation kan hjälpa henne?",
+  options: ["FN", "Fackförbund", "Kommunfullmäktige", "EU"],
+  correctAnswer: 1,
+  explanation: "Fackförbund hjälper medlemmar i arbetsrelaterade frågor."
+},
+{
+  id: 107,
+  topic: "Demokrati",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En person vill påverka politiken mellan valen. Vad är ett demokratiskt sätt?",
+  options: ["Hota politiker", "Gå med i ett parti", "Hacka myndigheter", "Sprida lögner"],
+  correctAnswer: 1,
+  explanation: "Partipolitiskt engagemang är ett demokratiskt sätt att påverka."
+},
+{
+  id: 108,
+  topic: "Religion",
+  difficulty: "easy",
+  type: "scenario",
+  question: "Johan vill inte tillhöra någon religion. Är det tillåtet i Sverige?",
+  options: ["Ja", "Nej", "Endast efter 18 år", "Endast efter ansökan"],
+  correctAnswer: 0,
+  explanation: "Religionsfriheten omfattar även rätten att inte tillhöra någon religion."
+},
+{
+  id: 109,
+  topic: "EU",
+  difficulty: "medium",
+  type: "scenario",
+  question: "Emma vill studera i ett annat EU-land. Vilken princip gör detta enklare?",
+  options: ["Kollektivavtal", "De fyra friheterna", "Värnplikten", "Barnkonventionen"],
+  correctAnswer: 1,
+  explanation: "EU:s fyra friheter underlättar studier och arbete mellan medlemsländer."
+},
+{
+  id: 110,
+  topic: "Barns rättigheter",
+  difficulty: "medium",
+  type: "scenario",
+  question: "En kommun planerar en ny lekplats. Vad ska den särskilt tänka på enligt barnkonventionen?",
+  options: ["Företagens vinst", "Barnets bästa", "Turism", "EU-regler"],
+  correctAnswer: 1,
+  explanation: "Barnets bästa ska beaktas i beslut som påverkar barn."
+}
+{
+  id: 111,
+  topic: "Lag och rätt",
+  difficulty: "easy",
+  type: "fact",
+  question: "Från vilken ålder är man straffmyndig i Sverige?",
+  options: ["13 år", "14 år", "15 år", "18 år"],
+  correctAnswer: 2,
+  explanation: "I Sverige är man straffmyndig från 15 års ålder."
+},
+{
+  id: 112,
+  topic: "Lag och rätt",
+  difficulty: "medium",
+  type: "scenario",
+  question: "En person frias i domstol. Vad betyder det?",
+  options: ["Personen får böter", "Personen anses oskyldig", "Personen får fängelse", "Personen blir av med medborgarskapet"],
+  correctAnswer: 1,
+  explanation: "Att frias innebär att domstolen inte anser att skuld har bevisats."
+},
+{
+  id: 113,
+  topic: "Medier",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vad är en ansvarig utgivares uppgift?",
+  options: ["Skriva alla artiklar", "Ansvara juridiskt för publiceringar", "Betala skatt", "Godkänna lagar"],
+  correctAnswer: 1,
+  explanation: "Ansvarig utgivare är juridiskt ansvarig för innehållet som publiceras."
+},
+{
+  id: 114,
+  topic: "Medier",
+  difficulty: "medium",
+  type: "scenario",
+  question: "En journalist använder flera oberoende källor innan publicering. Varför?",
+  options: ["För att öka försäljningen", "För att följa källkritik", "För att undvika skatt", "För att följa EU-regler"],
+  correctAnswer: 1,
+  explanation: "Journalister ska kontrollera uppgifter med flera oberoende källor."
+},
+{
+  id: 115,
+  topic: "Mänskliga rättigheter",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vad är målet med Sveriges jämställdhetspolitik?",
+  options: ["Samma bostad åt alla", "Samma religion åt alla", "Lika rättigheter och möjligheter", "Samma yrke åt alla"],
+  correctAnswer: 2,
+  explanation: "Kvinnor och män ska ha samma rättigheter och möjligheter."
+},
+{
+  id: 116,
+  topic: "Mänskliga rättigheter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En person utsätts för våld av en familjemedlem. Hur ser svensk lag på detta?",
+  options: ["Tillåtet i vissa fall", "Brottsligt", "En privat fråga", "Endast socialt problem"],
+  correctAnswer: 1,
+  explanation: "Våld i nära relationer är ett brott."
+},
+{
+  id: 117,
+  topic: "Barns rättigheter",
+  difficulty: "medium",
+  type: "fact",
+  question: "När blev barnkonventionen svensk lag?",
+  options: ["2010", "2015", "2020", "2025"],
+  correctAnswer: 2,
+  explanation: "Barnkonventionen blev lag i Sverige år 2020."
+},
+{
+  id: 118,
+  topic: "Barns rättigheter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Föräldrar skiljer sig och tvistar om var barnet ska bo. Vad ska domstolen göra?",
+  options: ["Endast lyssna på föräldrarna", "Fråga barnet vad det vill", "Låta kommunen avgöra", "Låta skolan bestämma"],
+  correctAnswer: 1,
+  explanation: "Barnets åsikter ska beaktas i frågor som rör barnet."
+},
+{
+  id: 119,
+  topic: "Minoriteter",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vilken grupp är erkänd som urfolk i Sverige?",
+  options: ["Romer", "Sverigefinnar", "Samer", "Tornedalingar"],
+  correctAnswer: 2,
+  explanation: "Samerna är Sveriges urfolk."
+},
+{
+  id: 120,
+  topic: "Minoriteter",
+  difficulty: "medium",
+  type: "fact",
+  question: "Vad heter samernas folkvalda parlament?",
+  options: ["Riksdagen", "Regionfullmäktige", "Sametinget", "Nordiska rådet"],
+  correctAnswer: 2,
+  explanation: "Sametinget representerar samerna i frågor om språk, kultur och identitet."
+},
+{
+  id: 121,
+  topic: "Arbetsmarknad",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vad gör en arbetsgivare?",
+  options: ["Stiftar lagar", "Anställer och betalar lön", "Driver domstolar", "Utfärdar pass"],
+  correctAnswer: 1,
+  explanation: "Arbetsgivaren anställer personal och betalar lön."
+},
+{
+  id: 122,
+  topic: "Arbetsmarknad",
+  difficulty: "medium",
+  type: "scenario",
+  question: "En arbetsplats omfattas av kollektivavtal. Vad regleras där?",
+  options: ["Bostadsköp", "Löner och arbetsvillkor", "Valresultat", "Passansökningar"],
+  correctAnswer: 1,
+  explanation: "Kollektivavtal reglerar löner och arbetsvillkor."
+},
+{
+  id: 123,
+  topic: "Historia",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vilken rörelse arbetade för kvinnors rösträtt?",
+  options: ["Kvinnorörelsen", "Idrottsrörelsen", "Miljörörelsen", "Handelsrörelsen"],
+  correctAnswer: 0,
+  explanation: "Kvinnorörelsen kämpade för kvinnors rösträtt."
+},
+{
+  id: 124,
+  topic: "Historia",
+  difficulty: "medium",
+  type: "fact",
+  question: "Vilket år genomfördes första valet där kvinnor fick rösta?",
+  options: ["1909", "1918", "1921", "1945"],
+  correctAnswer: 2,
+  explanation: "Valet 1921 var det första där kvinnor fick rösta."
+},
+{
+  id: 125,
+  topic: "Historia",
+  difficulty: "medium",
+  type: "scenario",
+  question: "Sverige deltog inte militärt i första världskriget. Vad kallades denna hållning?",
+  options: ["Neutralitet", "Allians", "Union", "Globalisering"],
+  correctAnswer: 0,
+  explanation: "Sverige var neutralt under första världskriget."
+},
+{
+  id: 126,
+  topic: "Historia",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vem hjälpte judar med skyddspass under andra världskriget?",
+  options: ["Olof Palme", "Raoul Wallenberg", "Dag Hammarskjöld", "Carl Bildt"],
+  correctAnswer: 1,
+  explanation: "Raoul Wallenberg räddade många judar genom skyddspass."
+},
+{
+  id: 127,
+  topic: "EU",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vilket år blev Sverige medlem i EU?",
+  options: ["1989", "1995", "2001", "2004"],
+  correctAnswer: 1,
+  explanation: "Sverige blev medlem i EU år 1995."
+},
+{
+  id: 128,
+  topic: "EU",
+  difficulty: "medium",
+  type: "scenario",
+  question: "Lisa vill arbeta i Spanien som svensk medborgare. Vad underlättar detta?",
+  options: ["Barnkonventionen", "De fyra friheterna", "Värnplikten", "Offentlighetsprincipen"],
+  correctAnswer: 1,
+  explanation: "EU:s fria rörlighet gör det lättare att arbeta i andra medlemsländer."
+},
+{
+  id: 129,
+  topic: "FN",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vad är ett av FN:s huvudsyften?",
+  options: ["Bygga motorvägar", "Bevara fred och säkerhet", "Fastställa löner", "Utse regeringar"],
+  correctAnswer: 1,
+  explanation: "FN arbetar för fred och säkerhet i världen."
+},
+{
+  id: 130,
+  topic: "FN",
+  difficulty: "medium",
+  type: "fact",
+  question: "Vad heter den svenska myndighet som arbetar med internationellt bistånd?",
+  options: ["CSN", "Sida", "SCB", "JO"],
+  correctAnswer: 1,
+  explanation: "Sida arbetar med internationellt utvecklingssamarbete."
+},
+{
+  id: 131,
+  topic: "Försvar",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vad består Försvarsmakten av?",
+  options: ["Kommuner och regioner", "Armén, marinen och flygvapnet", "Polis och tull", "Domstolar och åklagare"],
+  correctAnswer: 1,
+  explanation: "Försvarsmakten består av armén, marinen och flygvapnet."
+},
+{
+  id: 132,
+  topic: "Försvar",
+  difficulty: "medium",
+  type: "fact",
+  question: "Vilket år blev Sverige medlem i Nato?",
+  options: ["2022", "2023", "2024", "2025"],
+  correctAnswer: 2,
+  explanation: "Sverige blev medlem i Nato 2024."
+},
+{
+  id: 133,
+  topic: "Försvar",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Vilka omfattas av den allmänna värnplikten?",
+  options: ["Endast män", "Endast kvinnor", "Alla män och kvinnor som fyllt 18 år", "Alla över 15 år"],
+  correctAnswer: 2,
+  explanation: "Värnplikten omfattar både män och kvinnor."
+},
+{
+  id: 134,
+  topic: "Religion",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vad innebär religionsfrihet?",
+  options: ["Man måste vara religiös", "Man får välja religion eller ingen religion", "Endast kristendom är tillåten", "Staten väljer religion"],
+  correctAnswer: 1,
+  explanation: "Alla har rätt att välja religion eller att inte tro."
+},
+{
+  id: 135,
+  topic: "Religion",
+  difficulty: "medium",
+  type: "fact",
+  question: "När skildes Svenska kyrkan från staten?",
+  options: ["1951", "1979", "2000", "2020"],
+  correctAnswer: 2,
+  explanation: "År 2000 skildes Svenska kyrkan från staten."
+},
+{
+  id: 136,
+  topic: "Religion",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vilket kristet samfund har flest medlemmar i Sverige?",
+  options: ["Katolska kyrkan", "Ortodoxa kyrkan", "Svenska kyrkan", "Pingstkyrkan"],
+  correctAnswer: 2,
+  explanation: "Svenska kyrkan är det största kristna samfundet i Sverige."
+},
+{
+  id: 137,
+  topic: "Traditioner",
+  difficulty: "easy",
+  type: "fact",
+  question: "När firas Sveriges nationaldag?",
+  options: ["1 maj", "6 juni", "24 december", "31 december"],
+  correctAnswer: 1,
+  explanation: "Nationaldagen firas den 6 juni."
+},
+{
+  id: 138,
+  topic: "Traditioner",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vilken högtid firas den 13 december?",
+  options: ["Påsk", "Lucia", "Valborg", "Midsommar"],
+  correctAnswer: 1,
+  explanation: "Luciadagen firas den 13 december."
+},
+{
+  id: 139,
+  topic: "Traditioner",
+  difficulty: "medium",
+  type: "fact",
+  question: "Vilken högtid förknippas med midsommarstång?",
+  options: ["Jul", "Påsk", "Midsommar", "Alla helgons dag"],
+  correctAnswer: 2,
+  explanation: "Midsommar firas ofta med midsommarstång och dans."
+},
+{
+  id: 140,
+  topic: "Traditioner",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vilken högtid firas till minne av Jesu födelse?",
+  options: ["Påsk", "Jul", "Lucia", "Valborg"],
+  correctAnswer: 1,
+  explanation: "Jul firas till minne av Jesu födelse."
+},
+{
+  id: 141,
+  topic: "Demokrati",
+  difficulty: "medium",
+  type: "scenario",
+  question: "En väljare vill rösta utan att någon ser vilket parti som väljs. Vilken princip skyddar detta?",
+  options: ["Yttrandefrihet", "Hemlig röstning", "Värnplikt", "Offentlighetsprincipen"],
+  correctAnswer: 1,
+  explanation: "Valen i Sverige är hemliga."
+},
+{
+  id: 142,
+  topic: "Demokrati",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En politiker granskar regeringens arbete från oppositionen. Vilken roll har oppositionen?",
+  options: ["Utse domare", "Granska regeringen", "Leda myndigheter", "Bestämma skatter ensam"],
+  correctAnswer: 1,
+  explanation: "Oppositionens uppgift är att granska regeringen och föreslå alternativ politik."
+},
+{
+  id: 143,
+  topic: "Geografi",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vilket hav ligger vid Sveriges östra kust?",
+  options: ["Nordsjön", "Östersjön", "Atlanten", "Barents hav"],
+  correctAnswer: 1,
+  explanation: "Östersjön ligger längs Sveriges östra kust."
+},
+{
+  id: 144,
+  topic: "Geografi",
+  difficulty: "easy",
+  type: "fact",
+  question: "Vilka är Sveriges två största öar?",
+  options: ["Öland och Gotland", "Gotland och Ven", "Orust och Öland", "Ven och Orust"],
+  correctAnswer: 0,
+  explanation: "Gotland och Öland är Sveriges största öar."
+},
+{
+  id: 145,
+  topic: "Miljö",
+  difficulty: "medium",
+  type: "fact",
+  question: "Vad är den största orsaken till dagens globala uppvärmning enligt forskningen?",
+  options: ["Vulkaner", "Solstormar", "Människors utsläpp av växthusgaser", "Månens påverkan"],
+  correctAnswer: 2,
+  explanation: "Människors utsläpp av växthusgaser driver klimatförändringarna."
+},
+{
+  id: 146,
+  topic: "Miljö",
+  difficulty: "medium",
+  type: "scenario",
+  question: "Vilken följd av klimatförändringar nämns för Sverige?",
+  options: ["Fler översvämningar", "Mindre nederbörd överallt", "Färre värmeböljor", "Lägre havsnivåer"],
+  correctAnswer: 0,
+  explanation: "Kraftiga regn och översvämningar kan bli vanligare."
+},
+{
+  id: 147,
+  topic: "Arbetsmarknad",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En arbetsgivare och ett fackförbund förhandlar om löner. Vad kallas resultatet?",
+  options: ["Lag", "Budget", "Kollektivavtal", "Dom"],
+  correctAnswer: 2,
+  explanation: "Parterna tecknar kollektivavtal."
+},
+{
+  id: 148,
+  topic: "Mänskliga rättigheter",
+  difficulty: "medium",
+  type: "scenario",
+  question: "Två personer av samma kön vill gifta sig. Är detta tillåtet i Sverige?",
+  options: ["Ja", "Nej", "Endast utomlands", "Endast borgerligt"],
+  correctAnswer: 0,
+  explanation: "Samkönade äktenskap är tillåtna i Sverige."
+},
+{
+  id: 149,
+  topic: "Minoriteter",
+  difficulty: "medium",
+  type: "fact",
+  question: "Hur många nationella minoriteter erkänner Sverige?",
+  options: ["Tre", "Fyra", "Fem", "Sex"],
+  correctAnswer: 2,
+  explanation: "Sverige erkänner fem nationella minoriteter."
+},
+{
+  id: 150,
+  topic: "Minoriteter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En sverigefinne vill använda finska i kontakt med en myndighet inom ett förvaltningsområde. Är det möjligt?",
+  options: ["Ja", "Nej", "Endast med tolk", "Endast i domstol"],
+  correctAnswer: 0,
+  explanation: "Nationella minoriteter har särskilda språkliga rättigheter."
+}
+{
+  id: 151,
+  topic: "Demokrati",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En person tycker att ett politiskt beslut är dåligt. Vilket är det mest demokratiska sättet att försöka påverka beslutet?",
+  options: [
+    "Hot mot politiker",
+    "Engagera sig politiskt eller kontakta folkvalda",
+    "Vägra följa alla lagar",
+    "Sprida falska uppgifter"
+  ],
+  correctAnswer: 1,
+  explanation: "I en demokrati kan man påverka genom politiskt engagemang, debatt och kontakt med folkvalda."
+},
+{
+  id: 152,
+  topic: "Lag och rätt",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En person är misstänkt för brott men har ännu inte dömts. Hur ska personen betraktas?",
+  options: [
+    "Som skyldig",
+    "Som oskyldig tills skuld bevisats",
+    "Som dömd",
+    "Som vittne"
+  ],
+  correctAnswer: 1,
+  explanation: "Rättssäkerheten innebär att en person ska betraktas som oskyldig tills skuld bevisats."
+},
+{
+  id: 153,
+  topic: "Medier",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Du ser en sensationell nyhet på sociala medier. Vad är mest källkritiskt?",
+  options: [
+    "Dela direkt",
+    "Kontrollera flera trovärdiga källor",
+    "Fråga en vän",
+    "Lita på antalet gilla-markeringar"
+  ],
+  correctAnswer: 1,
+  explanation: "Källkritik innebär att kontrollera information med flera trovärdiga källor."
+},
+{
+  id: 154,
+  topic: "Mänskliga rättigheter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En arbetsgivare vill bara anställa personer från en viss etnisk grupp. Hur bedöms detta normalt?",
+  options: [
+    "Tillåtet",
+    "Diskriminering",
+    "Yttrandefrihet",
+    "Föreningsfrihet"
+  ],
+  correctAnswer: 1,
+  explanation: "Diskriminering på grund av etnicitet är förbjuden."
+},
+{
+  id: 155,
+  topic: "Barns rättigheter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Kommunen planerar att stänga en skolgård. Vad bör kommunen göra enligt barnkonventionen?",
+  options: [
+    "Enbart fråga vuxna",
+    "Ta hänsyn till barns bästa och lyssna på barn",
+    "Låta företag bestämma",
+    "Fråga endast lärarna"
+  ],
+  correctAnswer: 1,
+  explanation: "Barns bästa ska beaktas och barns åsikter ska få komma fram."
+},
+{
+  id: 156,
+  topic: "Arbetsmarknad",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En arbetsplats saknar kollektivavtal. Betyder det automatiskt att arbetsplatsen bryter mot lagen?",
+  options: ["Ja", "Nej", "Endast i offentlig sektor", "Endast om facket kräver det"],
+  correctAnswer: 1,
+  explanation: "Kollektivavtal är vanliga men inte obligatoriska enligt lag."
+},
+{
+  id: 157,
+  topic: "Religion",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En person vill byta religion. Vad säger svensk lag?",
+  options: [
+    "Det kräver myndighetsgodkännande",
+    "Det är tillåtet genom religionsfriheten",
+    "Det är förbjudet",
+    "Det kräver domstolsbeslut"
+  ],
+  correctAnswer: 1,
+  explanation: "Religionsfriheten innebär rätt att byta religion eller avstå från religion."
+},
+{
+  id: 158,
+  topic: "Demokrati",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En regering vill påverka vilka nyheter som får publiceras. Vilken demokratisk princip riskerar att skadas?",
+  options: [
+    "Tryckfrihet och yttrandefrihet",
+    "Värnplikt",
+    "Kommunalt självstyre",
+    "Skattesystemet"
+  ],
+  correctAnswer: 0,
+  explanation: "Fria medier är en viktig del av demokratin."
+},
+{
+  id: 159,
+  topic: "Lag och rätt",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En person döms för ett allvarligt brott. Vilken följd kan detta få även efter avtjänat straff?",
+  options: [
+    "Automatiskt förlorat medborgarskap",
+    "Registrering i belastningsregistret",
+    "Förbud att rösta",
+    "Förbud att bo i Sverige"
+  ],
+  correctAnswer: 1,
+  explanation: "Vissa allvarliga brott registreras i belastningsregistret."
+},
+{
+  id: 160,
+  topic: "EU",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En svensk flyttar till ett annat EU-land för att arbeta. Vilken princip gör detta möjligt?",
+  options: [
+    "Offentlighetsprincipen",
+    "De fyra friheterna",
+    "Värnplikten",
+    "Barnkonventionen"
+  ],
+  correctAnswer: 1,
+  explanation: "Fri rörlighet för personer är en av EU:s fyra friheter."
+},
+{
+  id: 161,
+  topic: "Mänskliga rättigheter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En person utsätts för hedersrelaterat våld. Hur ser svensk lag på detta?",
+  options: [
+    "Tillåtet inom familjen",
+    "Ett brott",
+    "En religiös fråga",
+    "En privat angelägenhet"
+  ],
+  correctAnswer: 1,
+  explanation: "Hedersrelaterat våld och förtryck är brottsligt."
+},
+{
+  id: 162,
+  topic: "Försvar",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En allvarlig kris inträffar. Varför finns det civila försvaret?",
+  options: [
+    "För att ordna val",
+    "För att viktiga samhällsfunktioner ska fungera",
+    "För att driva företag",
+    "För att ersätta regeringen"
+  ],
+  correctAnswer: 1,
+  explanation: "Civilförsvaret ska hjälpa samhället att fungera vid kriser och krig."
+},
+{
+  id: 163,
+  topic: "Minoriteter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En myndighet vägrar använda ett nationellt minoritetsspråk där lagen ger rätt till det. Vad kan problemet vara?",
+  options: [
+    "Brott mot minoriteters rättigheter",
+    "Brott mot värnplikten",
+    "Brott mot EU",
+    "Brott mot kollektivavtal"
+  ],
+  correctAnswer: 0,
+  explanation: "Nationella minoriteter har särskilda språkliga rättigheter."
+},
+{
+  id: 164,
+  topic: "Demokrati",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Varför är oppositionen viktig i en demokrati?",
+  options: [
+    "För att styra domstolarna",
+    "För att granska regeringen",
+    "För att bestämma skatter ensam",
+    "För att välja kung"
+  ],
+  correctAnswer: 1,
+  explanation: "Oppositionen granskar regeringen och erbjuder alternativ politik."
+},
+{
+  id: 165,
+  topic: "Arbetsmarknad",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En arbetstagare blir medlem i ett fackförbund. Vad är huvudsyftet?",
+  options: [
+    "Att få rösträtt",
+    "Att få stöd i arbetslivet",
+    "Att slippa skatt",
+    "Att få medborgarskap"
+  ],
+  correctAnswer: 1,
+  explanation: "Fackförbund hjälper medlemmar i frågor som rör arbetet."
+},
+{
+  id: 166,
+  topic: "Religion",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En kommun vill gynna en viss religion framför andra. Hur stämmer det med Sveriges syn på religion?",
+  options: [
+    "Det stämmer väl",
+    "Det strider mot principen om en sekulär stat",
+    "Det krävs enligt lag",
+    "Det beslutas av EU"
+  ],
+  correctAnswer: 1,
+  explanation: "Sverige är en sekulär stat och ska vara religiöst neutral."
+},
+{
+  id: 167,
+  topic: "Medier",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En person lämnar uppgifter till media om missförhållanden. Vilket skydd finns?",
+  options: [
+    "Meddelarskydd",
+    "Värnplikt",
+    "Budgetskydd",
+    "Rösträttsskydd"
+  ],
+  correctAnswer: 0,
+  explanation: "Personer som lämnar uppgifter till media har ett starkt skydd."
+},
+{
+  id: 168,
+  topic: "Historia",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Varför var folkrörelserna viktiga för demokratins utveckling?",
+  options: [
+    "De krävde rättigheter och organiserade människor",
+    "De styrde landet",
+    "De avskaffade riksdagen",
+    "De skapade EU"
+  ],
+  correctAnswer: 0,
+  explanation: "Folkrörelserna spelade en viktig roll i kampen för demokrati."
+},
+{
+  id: 169,
+  topic: "FN",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Två länder riskerar att hamna i krig. Vilket av FN:s syften är mest relevant?",
+  options: [
+    "Öka handeln",
+    "Bevara fred och säkerhet",
+    "Sänka skatter",
+    "Ordna val"
+  ],
+  correctAnswer: 1,
+  explanation: "FN arbetar för fred och säkerhet i världen."
+},
+{
+  id: 170,
+  topic: "Lag och rätt",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Varför har den åtalade rätt till en försvarsadvokat?",
+  options: [
+    "För att rättegången ska vara rättvis",
+    "För att fördröja processen",
+    "För att sänka straffet",
+    "För att hjälpa åklagaren"
+  ],
+  correctAnswer: 0,
+  explanation: "Rätten till försvar är en viktig del av rättssäkerheten."
+},
+{
+  id: 171,
+  topic: "Mänskliga rättigheter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En kvinna och en man gör samma arbete men får olika lön utan saklig grund. Vilken princip berörs?",
+  options: [
+    "Jämställdhet",
+    "Värnplikt",
+    "Religionsfrihet",
+    "Kommunalt självstyre"
+  ],
+  correctAnswer: 0,
+  explanation: "Sverige arbetar för lika lön för lika arbete."
+},
+{
+  id: 172,
+  topic: "Demokrati",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Varför hålls val med jämna mellanrum i en demokrati?",
+  options: [
+    "För att ge medborgarna möjlighet att påverka makten",
+    "För att öka skatterna",
+    "För att stärka domstolarna",
+    "För att minska yttrandefriheten"
+  ],
+  correctAnswer: 0,
+  explanation: "Regelbundna val gör att medborgarna kan utkräva ansvar."
+},
+{
+  id: 173,
+  topic: "EU",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Varför samarbetar EU-länder inom många olika områden?",
+  options: [
+    "För att bli starkare tillsammans",
+    "För att avskaffa alla nationella lagar",
+    "För att ersätta FN",
+    "För att välja regering åt medlemsländerna"
+  ],
+  correctAnswer: 0,
+  explanation: "EU bygger på tanken att medlemsländerna blir starkare tillsammans."
+},
+{
+  id: 174,
+  topic: "Försvar",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Vad är Försvarsmaktens huvudsakliga uppgift?",
+  options: [
+    "Driva sjukvård",
+    "Skydda Sveriges territorium och självständighet",
+    "Driva skolor",
+    "Samla in skatter"
+  ],
+  correctAnswer: 1,
+  explanation: "Försvarsmakten ska skydda Sverige och kunna bidra till internationella insatser."
+},
+{
+  id: 175,
+  topic: "Religion",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En elev möter undervisning om flera religioner i skolan. Varför?",
+  options: [
+    "För att alla ska välja samma religion",
+    "För att öka förståelse, tolerans och respekt",
+    "För att ersätta familjens värderingar",
+    "För att staten ska välja religion"
+  ],
+  correctAnswer: 1,
+  explanation: "Religionsundervisningen ska ge förståelse för olika religioner och livsåskådningar."
+}
+{
+  id: 176,
+  topic: "Demokrati",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En kommunpolitiker vill stoppa en fredlig demonstration bara för att hen inte håller med om budskapet. Vilken rättighet berörs?",
+  options: [
+    "Demonstrationsfriheten",
+    "Värnplikten",
+    "Näringsfriheten",
+    "Arbetsrätten"
+  ],
+  correctAnswer: 0,
+  explanation: "I Sverige har människor rätt att demonstrera fredligt."
+},
+{
+  id: 177,
+  topic: "Lag och rätt",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En domare dömer olika beroende på personens religion. Vilken princip bryts?",
+  options: [
+    "Likhet inför lagen",
+    "Yttrandefrihet",
+    "Valhemlighet",
+    "Offentlighetsprincipen"
+  ],
+  correctAnswer: 0,
+  explanation: "Alla ska behandlas lika inför lagen oavsett bakgrund."
+},
+{
+  id: 178,
+  topic: "Medier",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En myndighet vill hemlighålla alla dokument utan anledning. Vilken demokratisk princip försvagas?",
+  options: [
+    "Offentlighetsprincipen",
+    "Religionsfriheten",
+    "Föreningsfriheten",
+    "Värnplikten"
+  ],
+  correctAnswer: 0,
+  explanation: "Offentlighetsprincipen ger insyn i myndigheters arbete."
+},
+{
+  id: 179,
+  topic: "Mänskliga rättigheter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En person nekas bostad enbart på grund av sin etniska bakgrund. Hur bedöms detta?",
+  options: [
+    "Diskriminering",
+    "Jämställdhet",
+    "Yttrandefrihet",
+    "Demokrati"
+  ],
+  correctAnswer: 0,
+  explanation: "Diskriminering på grund av etnicitet är förbjuden."
+},
+{
+  id: 180,
+  topic: "Barns rättigheter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En lärare upptäcker att ett barn utsätts för våld hemma. Vad är viktigast enligt svensk lag?",
+  options: [
+    "Att inte lägga sig i",
+    "Att skydda barnets rättigheter",
+    "Att vänta tills barnet fyller 18",
+    "Att endast informera grannar"
+  ],
+  correctAnswer: 1,
+  explanation: "Barn ska skyddas mot alla former av våld."
+},
+{
+  id: 181,
+  topic: "Arbetsmarknad",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En anställd får hjälp av sitt fackförbund i en löneförhandling. Vad visar detta?",
+  options: [
+    "Hur arbetsmarknadens parter fungerar",
+    "Hur domstolar fungerar",
+    "Hur EU fungerar",
+    "Hur kommuner fungerar"
+  ],
+  correctAnswer: 0,
+  explanation: "Fack och arbetsgivare är arbetsmarknadens parter."
+},
+{
+  id: 182,
+  topic: "Religion",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En arbetsplats förbjuder alla religiösa uttryck utan saklig anledning. Vilken frihet kan påverkas?",
+  options: [
+    "Religionsfriheten",
+    "Näringsfriheten",
+    "Värnplikten",
+    "Offentlighetsprincipen"
+  ],
+  correctAnswer: 0,
+  explanation: "Religionsfriheten skyddar rätten att utöva sin tro."
+},
+{
+  id: 183,
+  topic: "EU",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En svensk student flyttar till Frankrike för studier. Vilket EU-samarbete gör detta enklare?",
+  options: [
+    "De fyra friheterna",
+    "Nato",
+    "FN",
+    "Eurovision"
+  ],
+  correctAnswer: 0,
+  explanation: "Fri rörlighet för personer underlättar studier i andra EU-länder."
+},
+{
+  id: 184,
+  topic: "FN",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Två länder försöker lösa en konflikt genom förhandling istället för krig. Vilket FN-mål stöds?",
+  options: [
+    "Fred och säkerhet",
+    "Turism",
+    "Valutapolitik",
+    "Skogsbruk"
+  ],
+  correctAnswer: 0,
+  explanation: "FN arbetar för fredliga lösningar på konflikter."
+},
+{
+  id: 185,
+  topic: "Försvar",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Ett omfattande strömavbrott drabbar landet. Vilken del av totalförsvaret hjälper till att hålla samhället igång?",
+  options: [
+    "Civilförsvaret",
+    "EU-parlamentet",
+    "Riksrevisionen",
+    "Sametinget"
+  ],
+  correctAnswer: 0,
+  explanation: "Civilförsvaret ska hjälpa viktiga samhällsfunktioner att fungera."
+},
+{
+  id: 186,
+  topic: "Minoriteter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En same vill bevara sitt språk och sin kultur. Vilken institution representerar samiska intressen?",
+  options: [
+    "Sametinget",
+    "EU-kommissionen",
+    "Regeringen",
+    "Högsta domstolen"
+  ],
+  correctAnswer: 0,
+  explanation: "Sametinget representerar den samiska befolkningen."
+},
+{
+  id: 187,
+  topic: "Historia",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Människor organiserar sig för att kräva rösträtt och bättre arbetsvillkor. Vad liknar detta?",
+  options: [
+    "Folkrörelserna",
+    "Nato",
+    "Kommunfullmäktige",
+    "Regionval"
+  ],
+  correctAnswer: 0,
+  explanation: "Folkrörelserna spelade en viktig roll i demokratins utveckling."
+},
+{
+  id: 188,
+  topic: "Demokrati",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Varför är fria val viktiga i en demokrati?",
+  options: [
+    "De ger medborgarna möjlighet att påverka makten",
+    "De minskar behovet av lagar",
+    "De ersätter domstolar",
+    "De avskaffar oppositionen"
+  ],
+  correctAnswer: 0,
+  explanation: "Fria val är grunden för folkstyret."
+},
+{
+  id: 189,
+  topic: "Lag och rätt",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En person anklagas för brott och får hjälp av en försvarsadvokat. Varför?",
+  options: [
+    "För att säkerställa en rättvis rättegång",
+    "För att undvika domstol",
+    "För att påverka val",
+    "För att få bidrag"
+  ],
+  correctAnswer: 0,
+  explanation: "Försvarsadvokaten är en viktig del av rättssäkerheten."
+},
+{
+  id: 190,
+  topic: "Medier",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En journalist avslöjar missbruk av offentliga medel. Vilken funktion har medierna då?",
+  options: [
+    "Granska makten",
+    "Döma brottslingar",
+    "Besluta lagar",
+    "Utse ministrar"
+  ],
+  correctAnswer: 0,
+  explanation: "Fria medier granskar personer och institutioner med makt."
+},
+{
+  id: 191,
+  topic: "Mänskliga rättigheter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En arbetsplats betalar kvinnor mindre än män för samma arbete. Vilken princip utmanas?",
+  options: [
+    "Jämställdhet",
+    "Religionsfrihet",
+    "Värnplikt",
+    "Kommunalt självstyre"
+  ],
+  correctAnswer: 0,
+  explanation: "Lika lön för lika arbete är en viktig jämställdhetsfråga."
+},
+{
+  id: 192,
+  topic: "Barns rättigheter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En kommun bygger ett nytt bostadsområde. Vad bör särskilt beaktas enligt barnkonventionen?",
+  options: [
+    "Barnets bästa",
+    "Aktiekurser",
+    "Turism",
+    "EU-budget"
+  ],
+  correctAnswer: 0,
+  explanation: "Barnets bästa ska beaktas i beslut som påverkar barn."
+},
+{
+  id: 193,
+  topic: "Arbetsmarknad",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Vem bestämmer normalt lönenivåer i Sverige?",
+  options: [
+    "Arbetsmarknadens parter",
+    "Kungen",
+    "FN",
+    "Polisen"
+  ],
+  correctAnswer: 0,
+  explanation: "Löner förhandlas oftast mellan arbetsgivare och fack."
+},
+{
+  id: 194,
+  topic: "Religion",
+  difficulty: "hard",
+  type: "scenario",
+  question: "En elev vill inte delta i religiösa aktiviteter. Vilken rättighet är relevant?",
+  options: [
+    "Religionsfriheten",
+    "Näringsfriheten",
+    "Valfriheten",
+    "Värnplikten"
+  ],
+  correctAnswer: 0,
+  explanation: "Religionsfriheten inkluderar rätten att inte vara religiös."
+},
+{
+  id: 195,
+  topic: "EU",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Varför samarbetar EU-länder kring handel?",
+  options: [
+    "För att underlätta ekonomiskt samarbete",
+    "För att ersätta nationella parlament",
+    "För att avskaffa val",
+    "För att styra skolor"
+  ],
+  correctAnswer: 0,
+  explanation: "EU samarbetar inom bland annat handel och ekonomi."
+},
+{
+  id: 196,
+  topic: "FN",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Ett land bryter mot mänskliga rättigheter. Vilken organisation arbetar globalt med dessa frågor?",
+  options: [
+    "FN",
+    "LO",
+    "SKR",
+    "TCO"
+  ],
+  correctAnswer: 0,
+  explanation: "FN arbetar för mänskliga rättigheter världen över."
+},
+{
+  id: 197,
+  topic: "Försvar",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Vad är huvudsyftet med Sveriges militära försvar?",
+  options: [
+    "Skydda Sveriges territorium och självständighet",
+    "Driva sjukvård",
+    "Skapa lagar",
+    "Hantera pensioner"
+  ],
+  correctAnswer: 0,
+  explanation: "Försvarsmakten ska skydda landet och dess självständighet."
+},
+{
+  id: 198,
+  topic: "Minoriteter",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Varför har nationella minoriteter särskilda rättigheter i Sverige?",
+  options: [
+    "För att skydda språk, kultur och identitet",
+    "För att ge rösträtt",
+    "För att minska skatter",
+    "För att välja regering"
+  ],
+  correctAnswer: 0,
+  explanation: "Sverige skyddar nationella minoriteters språk och kultur."
+},
+{
+  id: 199,
+  topic: "Historia",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Vilken förändring markerade Sveriges genombrott som demokrati?",
+  options: [
+    "Att kvinnor och män fick rösta i riksdagsval",
+    "EU-medlemskapet",
+    "Nato-medlemskapet",
+    "Industrialiseringen"
+  ],
+  correctAnswer: 0,
+  explanation: "Valet 1921 med allmän rösträtt markerade demokratins genombrott."
+},
+{
+  id: 200,
+  topic: "Demokrati",
+  difficulty: "hard",
+  type: "scenario",
+  question: "Varför är det viktigt att människor får uttrycka sina åsikter fritt i en demokrati?",
+  options: [
+    "För att möjliggöra öppen debatt och påverkan",
+    "För att undvika val",
+    "För att ersätta lagar",
+    "För att minska antalet partier"
+  ],
+  correctAnswer: 0,
+  explanation: "Yttrandefrihet är en grundläggande del av ett demokratiskt samhälle."
+}
