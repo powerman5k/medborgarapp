@@ -3,13 +3,16 @@ import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { QuizClient } from "@/components/QuizClient";
-import { getQuestionsByTopic, getTopicById } from "@/lib/quiz";
+import { getQuestionsByTopic, getTopicById, normalizeQuestionTypeFilter } from "@/lib/quiz";
 import { topics } from "@/data/questions";
+
+type SearchParams = Record<string, string | string[] | undefined>;
 
 type QuizPageProps = {
   params: Promise<{
     topicId: string;
   }>;
+  searchParams: Promise<SearchParams>;
 };
 
 export function generateStaticParams() {
@@ -18,8 +21,13 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function QuizPage({ params }: QuizPageProps) {
+function readText(value: string | string[] | undefined): string | undefined {
+  return Array.isArray(value) ? value[0] : value;
+}
+
+export default async function QuizPage({ params, searchParams }: QuizPageProps) {
   const { topicId } = await params;
+  const query = await searchParams;
   const topic = getTopicById(topicId);
 
   if (!topic) {
@@ -27,6 +35,7 @@ export default async function QuizPage({ params }: QuizPageProps) {
   }
 
   const questions = getQuestionsByTopic(topic.id);
+  const initialFilter = normalizeQuestionTypeFilter(readText(query.type));
 
   return (
     <PageShell>
@@ -39,7 +48,7 @@ export default async function QuizPage({ params }: QuizPageProps) {
           Till ämnen
         </Link>
       </div>
-      <QuizClient topic={topic} questions={questions} />
+      <QuizClient topic={topic} questions={questions} initialFilter={initialFilter} />
     </PageShell>
   );
 }

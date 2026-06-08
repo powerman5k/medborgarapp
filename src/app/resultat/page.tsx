@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BookOpenCheck, RotateCcw, Trophy } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { PrimaryLink } from "@/components/PrimaryLink";
-import { getResultMessage, getTopicById } from "@/lib/quiz";
+import { getResultMessage, getTopicById, normalizeQuestionTypeFilter, questionTypeFilterOptions } from "@/lib/quiz";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
@@ -25,8 +25,13 @@ export default async function ResultPage({ searchParams }: ResultPageProps) {
   const score = readNumber(params.score);
   const total = readNumber(params.total);
   const topicId = readText(params.topic);
+  const typeFilter = normalizeQuestionTypeFilter(readText(params.type));
   const topic = topicId ? getTopicById(topicId) : undefined;
   const resultMessage = getResultMessage(score, total);
+  const retryHref = topic
+    ? `/quiz/${topic.id}${typeFilter === "all" ? "" : `?type=${typeFilter}`}`
+    : "/amnen";
+  const filterLabel = questionTypeFilterOptions.find((option) => option.value === typeFilter)?.label;
 
   return (
     <PageShell>
@@ -37,6 +42,7 @@ export default async function ResultPage({ searchParams }: ResultPageProps) {
         <p className="mt-6 text-sm font-bold uppercase tracking-[0.18em] text-moss">
           {topic ? topic.title : "Resultat"}
         </p>
+        {filterLabel ? <p className="mt-2 text-sm font-semibold text-ink/55">{filterLabel}</p> : null}
         <h1 className="mt-3 text-4xl font-black text-ink sm:text-5xl">
           {score} av {total} rätt
         </h1>
@@ -45,7 +51,7 @@ export default async function ResultPage({ searchParams }: ResultPageProps) {
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           {topic ? (
             <Link
-              href={`/quiz/${topic.id}`}
+              href={retryHref}
               className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/10 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-mist focus:outline-none focus:ring-4 focus:ring-leaf/20"
             >
               <RotateCcw aria-hidden="true" className="h-4 w-4" />
