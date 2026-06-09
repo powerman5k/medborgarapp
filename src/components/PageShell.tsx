@@ -20,6 +20,12 @@ export function PageShell({ children }: PageShellProps) {
             <Link className="rounded-full px-3 py-2 hover:bg-white hover:text-ink focus:outline-none focus:ring-4 focus:ring-leaf/20" href="/amnen">
               Ämnen
             </Link>
+            <Link className="rounded-full px-3 py-2 hover:bg-white hover:text-ink focus:outline-none focus:ring-4 focus:ring-leaf/20" href="/dashboard">
+              Dashboard
+            </Link>
+            <Link className="rounded-full px-3 py-2 hover:bg-white hover:text-ink focus:outline-none focus:ring-4 focus:ring-leaf/20" href="/login">
+              Logga in
+            </Link>
           </nav>
         </header>
         {children}
