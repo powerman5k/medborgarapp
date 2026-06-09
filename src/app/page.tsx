@@ -2,11 +2,10 @@ import Image from "next/image";
 import { BookOpen, CheckCircle2, Sparkles } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { PrimaryLink } from "@/components/PrimaryLink";
-import { getTopicsWithCounts } from "@/lib/quiz";
+import { getQuizStats } from "@/lib/quiz";
 
 export default function Home() {
-  const topics = getTopicsWithCounts();
-  const totalQuestions = topics.reduce((sum, topic) => sum + topic.questionCount, 0);
+  const { totalQuestions, totalTopics } = getQuizStats();
 
   return (
     <PageShell>
@@ -26,7 +25,7 @@ export default function Home() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <PrimaryLink href="/amnen">Börja öva</PrimaryLink>
             <div className="text-sm font-medium text-ink/65">
-              {topics.length} ämnen · {totalQuestions} lokala frågor
+              {totalTopics} ämnen · {totalQuestions} lokala frågor
             </div>
           </div>
         </div>
@@ -47,7 +46,7 @@ export default function Home() {
       <section className="grid gap-3 sm:grid-cols-3">
         <div className="rounded-lg border border-ink/10 bg-white/80 p-4">
           <BookOpen aria-hidden="true" className="h-5 w-5 text-moss" />
-          <p className="mt-3 text-2xl font-black text-ink">{topics.length}</p>
+          <p className="mt-3 text-2xl font-black text-ink">{totalTopics}</p>
           <p className="text-sm text-ink/65">ämnen att öva på</p>
         </div>
         <div className="rounded-lg border border-ink/10 bg-white/80 p-4">

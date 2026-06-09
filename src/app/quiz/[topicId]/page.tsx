@@ -3,8 +3,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { QuizClient } from "@/components/QuizClient";
-import { getQuestionsByTopic, getTopicById, normalizeQuestionTypeFilter } from "@/lib/quiz";
-import { topics } from "@/data/questions";
+import { getAllTopics, getQuestionsByTopic, getTopicById, normalizeQuestionTypeFilter } from "@/lib/quiz";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
@@ -16,7 +15,7 @@ type QuizPageProps = {
 };
 
 export function generateStaticParams() {
-  return topics.map((topic) => ({
+  return getAllTopics().map((topic) => ({
     topicId: topic.id,
   }));
 }

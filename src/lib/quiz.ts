@@ -4,6 +4,11 @@ export type TopicWithCount = Topic & {
   questionCount: number;
 };
 
+export type QuizStats = {
+  totalTopics: number;
+  totalQuestions: number;
+};
+
 export type QuestionTypeFilter = "all" | QuestionType;
 
 export const questionTypeFilterOptions: Array<{
@@ -16,15 +21,45 @@ export const questionTypeFilterOptions: Array<{
   { value: "truefalse", label: "Endast sant/falskt" },
 ];
 
+function getFallbackTopic(question: Question): Topic {
+  return {
+    id: question.topicId,
+    title: question.topic,
+    description: `Frågor om ${question.topic.toLowerCase()}.`,
+    icon: "landmark",
+  };
+}
+
+export function getAllTopics(): Topic[] {
+  const topicsById = new Map(topics.map((topic) => [topic.id, topic]));
+
+  for (const question of questions) {
+    if (!topicsById.has(question.topicId)) {
+      topicsById.set(question.topicId, getFallbackTopic(question));
+    }
+  }
+
+  return [...topicsById.values()].filter((topic) =>
+    questions.some((question) => question.topicId === topic.id),
+  );
+}
+
+export function getQuizStats(): QuizStats {
+  return {
+    totalTopics: new Set(questions.map((question) => question.topicId)).size,
+    totalQuestions: questions.length,
+  };
+}
+
 export function getTopicsWithCounts(): TopicWithCount[] {
-  return topics.map((topic) => ({
+  return getAllTopics().map((topic) => ({
     ...topic,
     questionCount: getQuestionsByTopic(topic.id).length,
   }));
 }
 
 export function getTopicById(topicId: string): Topic | undefined {
-  return topics.find((topic) => topic.id === topicId);
+  return getAllTopics().find((topic) => topic.id === topicId);
 }
 
 export function normalizeQuestionTypeFilter(value: string | undefined): QuestionTypeFilter {
