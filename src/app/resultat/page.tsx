@@ -4,6 +4,7 @@ import { PageShell } from "@/components/PageShell";
 import { PrimaryLink } from "@/components/PrimaryLink";
 import { SaveQuizResult } from "@/components/SaveQuizResult";
 import {
+  examTopic,
   getResultMessage,
   getTopicById,
   normalizeQuestionTypeFilter,
@@ -34,12 +35,21 @@ export default async function ResultPage({ searchParams }: ResultPageProps) {
   const topicId = readText(params.topic);
   const attemptId = readText(params.attempt);
   const typeFilter = normalizeQuestionTypeFilter(readText(params.type));
-  const topic = topicId === wrongAnswersTopic.id ? wrongAnswersTopic : topicId ? getTopicById(topicId) : undefined;
+  const topic =
+    topicId === wrongAnswersTopic.id
+      ? wrongAnswersTopic
+      : topicId === examTopic.id
+        ? examTopic
+        : topicId
+          ? getTopicById(topicId)
+          : undefined;
   const resultMessage = getResultMessage(score, total);
   const retryHref = topic
     ? topic.id === wrongAnswersTopic.id
       ? "/feltraning"
-      : `/quiz/${topic.id}${typeFilter === "all" ? "" : `?type=${typeFilter}`}`
+      : topic.id === examTopic.id
+        ? "/prov"
+        : `/quiz/${topic.id}${typeFilter === "all" ? "" : `?type=${typeFilter}`}`
     : "/amnen";
   const filterLabel = questionTypeFilterOptions.find((option) => option.value === typeFilter)?.label;
   const resultMode = [topic?.title ?? "Okänt ämne", filterLabel].filter(Boolean).join(" · ");

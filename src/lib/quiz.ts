@@ -18,6 +18,13 @@ export const wrongAnswersTopic: Topic = {
   icon: "vote",
 };
 
+export const examTopic: Topic = {
+  id: "prov",
+  title: "Provläge",
+  description: "20 slumpade frågor med timer.",
+  icon: "landmark",
+};
+
 export const questionTypeFilterOptions: Array<{
   value: QuestionTypeFilter;
   label: string;
