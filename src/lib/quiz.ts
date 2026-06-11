@@ -11,6 +11,13 @@ export type QuizStats = {
 
 export type QuestionTypeFilter = "all" | QuestionType;
 
+export const wrongAnswersTopic: Topic = {
+  id: "feltraning",
+  title: "Felträning",
+  description: "Frågor du tidigare svarat fel på.",
+  icon: "vote",
+};
+
 export const questionTypeFilterOptions: Array<{
   value: QuestionTypeFilter;
   label: string;
@@ -74,6 +81,14 @@ export function getQuestionsByTopic(topicId: string, typeFilter: QuestionTypeFil
 
     return matchesTopic && matchesType;
   });
+}
+
+export function getQuestionsByIds(questionIds: number[]): Question[] {
+  const questionsById = new Map(questions.map((question) => [question.id, question]));
+
+  return questionIds
+    .map((questionId) => questionsById.get(questionId))
+    .filter((question): question is Question => Boolean(question));
 }
 
 export function getResultMessage(score: number, total: number): string {

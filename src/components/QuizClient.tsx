@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { CheckCircle2, Circle, Filter, XCircle } from "lucide-react";
+import { saveWrongAnswer } from "@/app/quiz/actions";
 import type { Question, Topic } from "@/data/questions";
 import { questionTypeFilterOptions, type QuestionTypeFilter } from "@/lib/quiz";
 
@@ -57,9 +58,13 @@ export function QuizClient({ topic, questions, initialFilter = "all" }: QuizClie
       return;
     }
 
+    const answerIsCorrect = answerIndex === currentQuestion.correctAnswer;
+
     setSelectedAnswer(answerIndex);
-    if (answerIndex === currentQuestion.correctAnswer) {
+    if (answerIsCorrect) {
       setScore((value) => value + 1);
+    } else {
+      void saveWrongAnswer(currentQuestion.id);
     }
   }
 

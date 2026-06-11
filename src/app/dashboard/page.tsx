@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { BarChart3, CalendarDays, LogOut, ShieldCheck } from "lucide-react";
+import { BarChart3, CalendarDays, LogOut, ShieldCheck, Target } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { createClient } from "@/lib/supabase/server";
 import { logout } from "./actions";
@@ -106,12 +106,21 @@ export default async function DashboardPage() {
         </div>
 
         <div className="mt-8 border-t border-ink/10 pt-5">
-          <Link
-            href="/amnen"
-            className="inline-flex items-center justify-center rounded-full bg-moss px-5 py-3 text-sm font-semibold text-white transition hover:bg-ink focus:outline-none focus:ring-4 focus:ring-leaf/25"
-          >
-            Fortsätt öva
-          </Link>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/amnen"
+              className="inline-flex items-center justify-center rounded-full bg-moss px-5 py-3 text-sm font-semibold text-white transition hover:bg-ink focus:outline-none focus:ring-4 focus:ring-leaf/25"
+            >
+              Fortsätt öva
+            </Link>
+            <Link
+              href="/feltraning"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/10 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-mist focus:outline-none focus:ring-4 focus:ring-leaf/20"
+            >
+              <Target aria-hidden="true" className="h-4 w-4" />
+              Felträning
+            </Link>
+          </div>
         </div>
       </section>
 

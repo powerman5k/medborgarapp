@@ -3,7 +3,13 @@ import { BookOpenCheck, RotateCcw, Trophy } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { PrimaryLink } from "@/components/PrimaryLink";
 import { SaveQuizResult } from "@/components/SaveQuizResult";
-import { getResultMessage, getTopicById, normalizeQuestionTypeFilter, questionTypeFilterOptions } from "@/lib/quiz";
+import {
+  getResultMessage,
+  getTopicById,
+  normalizeQuestionTypeFilter,
+  questionTypeFilterOptions,
+  wrongAnswersTopic,
+} from "@/lib/quiz";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
@@ -28,10 +34,12 @@ export default async function ResultPage({ searchParams }: ResultPageProps) {
   const topicId = readText(params.topic);
   const attemptId = readText(params.attempt);
   const typeFilter = normalizeQuestionTypeFilter(readText(params.type));
-  const topic = topicId ? getTopicById(topicId) : undefined;
+  const topic = topicId === wrongAnswersTopic.id ? wrongAnswersTopic : topicId ? getTopicById(topicId) : undefined;
   const resultMessage = getResultMessage(score, total);
   const retryHref = topic
-    ? `/quiz/${topic.id}${typeFilter === "all" ? "" : `?type=${typeFilter}`}`
+    ? topic.id === wrongAnswersTopic.id
+      ? "/feltraning"
+      : `/quiz/${topic.id}${typeFilter === "all" ? "" : `?type=${typeFilter}`}`
     : "/amnen";
   const filterLabel = questionTypeFilterOptions.find((option) => option.value === typeFilter)?.label;
   const resultMode = [topic?.title ?? "Okänt ämne", filterLabel].filter(Boolean).join(" · ");
