@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { KeyRound, LockKeyhole, LogIn, UserPlus } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
+import { createClient } from "@/lib/supabase/server";
 import { login, signup } from "./actions";
 
 type LoginPageProps = {
@@ -14,6 +16,22 @@ function readText(value: string | string[] | undefined) {
 export default async function LoginPage({ searchParams }: LoginPageProps) {
   const params = await searchParams;
   const message = readText(params.message);
+  const supabase = await createClient();
+  let isAuthenticated = false;
+
+  try {
+    const { data, error } = await supabase.auth.getUser();
+
+    if (!error && data.user) {
+      isAuthenticated = true;
+    }
+  } catch (error) {
+    console.error("Supabase login page session lookup failed", error);
+  }
+
+  if (isAuthenticated) {
+    redirect("/dashboard");
+  }
 
   return (
     <PageShell>

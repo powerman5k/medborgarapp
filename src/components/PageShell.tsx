@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BookOpenCheck } from "lucide-react";
+import { AuthNavigation } from "@/components/AuthNavigation";
 
 type PageShellProps = {
   children: React.ReactNode;
@@ -16,23 +17,7 @@ export function PageShell({ children }: PageShellProps) {
             </span>
             <span className="hidden text-sm font-bold text-ink sm:inline">Medborgarskapsövning</span>
           </Link>
-          <nav className="flex flex-wrap items-center justify-end gap-2 text-sm font-medium text-ink/70">
-            <Link className="rounded-full px-3 py-2 hover:bg-white hover:text-ink focus:outline-none focus:ring-4 focus:ring-leaf/20" href="/amnen">
-              Ämnen
-            </Link>
-            <Link className="rounded-full px-3 py-2 hover:bg-white hover:text-ink focus:outline-none focus:ring-4 focus:ring-leaf/20" href="/prov">
-              Provläge
-            </Link>
-            <Link className="rounded-full px-3 py-2 hover:bg-white hover:text-ink focus:outline-none focus:ring-4 focus:ring-leaf/20" href="/dashboard">
-              Dashboard
-            </Link>
-            <Link className="rounded-full px-3 py-2 hover:bg-white hover:text-ink focus:outline-none focus:ring-4 focus:ring-leaf/20" href="/feltraning">
-              Felträning
-            </Link>
-            <Link className="rounded-full px-3 py-2 hover:bg-white hover:text-ink focus:outline-none focus:ring-4 focus:ring-leaf/20" href="/login">
-              Logga in
-            </Link>
-          </nav>
+          <AuthNavigation />
         </header>
         {children}
       </div>

@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
-import { BookOpen, CheckCircle2, ClipboardCheck, LogIn, Sparkles } from "lucide-react";
+import { BookOpen, CheckCircle2, Sparkles } from "lucide-react";
+import { HomeActions } from "@/components/HomeActions";
 import { PageShell } from "@/components/PageShell";
-import { PrimaryLink } from "@/components/PrimaryLink";
 import { getQuizStats } from "@/lib/quiz";
 
 export default function Home() {
@@ -23,26 +22,7 @@ export default function Home() {
             Öva ämne för ämne med tydliga flervalsfrågor, direkt återkoppling och korta förklaringar efter varje svar.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <PrimaryLink href="/amnen">Börja öva</PrimaryLink>
-            <Link
-              href="/prov"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/10 bg-white px-5 py-3 text-sm font-semibold text-ink shadow-sm transition hover:-translate-y-0.5 hover:bg-mist focus:outline-none focus:ring-4 focus:ring-leaf/20"
-            >
-              <ClipboardCheck aria-hidden="true" className="h-4 w-4" />
-              Starta prov
-            </Link>
-            <Link
-              href="/login"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/10 bg-white px-5 py-3 text-sm font-semibold text-ink shadow-sm transition hover:-translate-y-0.5 hover:bg-mist focus:outline-none focus:ring-4 focus:ring-leaf/20"
-            >
-              <LogIn aria-hidden="true" className="h-4 w-4" />
-              Logga in
-            </Link>
-            <div className="text-sm font-medium text-ink/65">
-              {totalTopics} ämnen · {totalQuestions} lokala frågor
-            </div>
-          </div>
+          <HomeActions statsText={`${totalTopics} ämnen · ${totalQuestions} lokala frågor`} />
         </div>
 
         <div className="relative mx-auto w-full max-w-xl">
