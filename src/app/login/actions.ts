@@ -1,34 +1,9 @@
 "use server";
 
-import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+import { getErrorMessage, getFormValue, redirectWithMessage } from "@/lib/auth/forms";
+import { getRequestOrigin } from "@/lib/auth/request";
 import { createClient } from "@/lib/supabase/server";
-
-const defaultAuthErrorMessage = "Något gick fel med Supabase Auth. Kontrollera inställningarna och prova igen.";
-
-function getFormValue(formData: FormData, key: string) {
-  const value = formData.get(key);
-  return typeof value === "string" ? value.trim() : "";
-}
-
-function getErrorMessage(error: unknown) {
-  if (error instanceof Error && error.message) {
-    return error.message;
-  }
-
-  if (typeof error === "object" && error && "message" in error) {
-    const message = (error as { message?: unknown }).message;
-    if (typeof message === "string" && message) {
-      return message;
-    }
-  }
-
-  return defaultAuthErrorMessage;
-}
-
-function redirectWithMessage(path: string, message: string): never {
-  redirect(`${path}?message=${encodeURIComponent(message)}`);
-}
 
 export async function login(formData: FormData) {
   const email = getFormValue(formData, "email");
@@ -71,7 +46,7 @@ export async function signup(formData: FormData) {
     redirectWithMessage("/login", "Lösenordet behöver vara minst 6 tecken.");
   }
 
-  const origin = (await headers()).get("origin") ?? "";
+  const origin = await getRequestOrigin();
   const supabase = await createClient();
   let sessionCreated = false;
   let authError: unknown = null;

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LockKeyhole, LogIn, UserPlus } from "lucide-react";
+import { KeyRound, LockKeyhole, LogIn, UserPlus } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { login, signup } from "./actions";
 
@@ -76,7 +76,14 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
           </div>
         </form>
 
-        <div className="mt-6 text-center text-sm font-medium text-ink/65">
+        <div className="mt-6 flex flex-col items-center justify-center gap-2 text-sm font-medium text-ink/65 sm:flex-row">
+          <Link
+            href="/forgot-password"
+            className="inline-flex items-center gap-2 rounded-full px-3 py-2 text-moss hover:bg-mist focus:outline-none focus:ring-4 focus:ring-leaf/20"
+          >
+            <KeyRound aria-hidden="true" className="h-4 w-4" />
+            Glömt lösenord?
+          </Link>
           <Link href="/" className="rounded-full px-3 py-2 text-moss hover:bg-mist focus:outline-none focus:ring-4 focus:ring-leaf/20">
             Till startsidan
           </Link>
