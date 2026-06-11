@@ -11,9 +11,8 @@ type ClaimsWithEmail = {
 
 export default async function DashboardPage() {
   const supabase = await createClient();
-  const {
-    data: { claims },
-  } = await supabase.auth.getClaims();
+  const { data } = await supabase.auth.getClaims();
+  const claims = data?.claims;
 
   if (!claims) {
     redirect("/login");
