@@ -5,20 +5,25 @@ import { PageShell } from "@/components/PageShell";
 import { createClient } from "@/lib/supabase/server";
 import { logout } from "./actions";
 
-type ClaimsWithEmail = {
-  email?: string;
-};
-
 export default async function DashboardPage() {
   const supabase = await createClient();
-  const { data } = await supabase.auth.getClaims();
-  const claims = data?.claims;
+  let isAuthenticated = false;
+  let email = "Okänd e-post";
 
-  if (!claims) {
-    redirect("/login");
+  try {
+    const { data, error } = await supabase.auth.getUser();
+
+    if (!error && data.user) {
+      isAuthenticated = true;
+      email = data.user.email ?? email;
+    }
+  } catch (error) {
+    console.error("Supabase user lookup failed", error);
   }
 
-  const email = (claims as ClaimsWithEmail).email ?? "Okänd e-post";
+  if (!isAuthenticated) {
+    redirect("/login?message=Logga in igen för att fortsätta.");
+  }
 
   return (
     <PageShell>

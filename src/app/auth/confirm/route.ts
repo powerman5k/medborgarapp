@@ -9,26 +9,36 @@ export async function GET(request: NextRequest) {
   const code = requestUrl.searchParams.get("code");
   const tokenHash = requestUrl.searchParams.get("token_hash");
   const type = requestUrl.searchParams.get("type");
-  const next = requestUrl.searchParams.get("next") ?? "/dashboard";
+  const nextPath = requestUrl.searchParams.get("next");
+  const next = nextPath?.startsWith("/") && !nextPath.startsWith("//") ? nextPath : "/dashboard";
   const supabase = await createClient();
+  let isVerified = false;
 
-  if (code) {
-    const { error } = await supabase.auth.exchangeCodeForSession(code);
+  try {
+    if (code) {
+      const { error } = await supabase.auth.exchangeCodeForSession(code);
 
-    if (!error) {
-      redirect(next);
+      if (!error) {
+        isVerified = true;
+      }
     }
+
+    if (tokenHash && type) {
+      const { error } = await supabase.auth.verifyOtp({
+        type: type as EmailOtpType,
+        token_hash: tokenHash,
+      });
+
+      if (!error) {
+        isVerified = true;
+      }
+    }
+  } catch (error) {
+    console.error("Supabase email confirmation failed", error);
   }
 
-  if (tokenHash && type) {
-    const { error } = await supabase.auth.verifyOtp({
-      type: type as EmailOtpType,
-      token_hash: tokenHash,
-    });
-
-    if (!error) {
-      redirect(next);
-    }
+  if (isVerified) {
+    redirect(next);
   }
 
   redirect("/login?message=Bekräftelselänken kunde inte användas.");

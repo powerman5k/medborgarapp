@@ -37,10 +37,16 @@ export async function updateSession(request: NextRequest) {
     },
   );
 
-  const { data } = await supabase.auth.getClaims();
-  const claims = data?.claims;
+  let isAuthenticated = false;
 
-  if (!claims && request.nextUrl.pathname.startsWith("/dashboard")) {
+  try {
+    const { data, error } = await supabase.auth.getUser();
+    isAuthenticated = Boolean(!error && data.user);
+  } catch (error) {
+    console.error("Supabase session lookup failed", error);
+  }
+
+  if (!isAuthenticated && request.nextUrl.pathname.startsWith("/dashboard")) {
     const url = request.nextUrl.clone();
     url.pathname = "/login";
     url.searchParams.set("redirectTo", request.nextUrl.pathname);
