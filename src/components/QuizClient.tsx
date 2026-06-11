@@ -18,6 +18,14 @@ const difficultyLabels: Record<Question["difficulty"], string> = {
   hard: "Svår",
 };
 
+function createAttemptId() {
+  if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
+    return crypto.randomUUID();
+  }
+
+  return `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
 export function QuizClient({ topic, questions, initialFilter = "all" }: QuizClientProps) {
   const router = useRouter();
   const [typeFilter, setTypeFilter] = useState<QuestionTypeFilter>(initialFilter);
@@ -59,7 +67,15 @@ export function QuizClient({ topic, questions, initialFilter = "all" }: QuizClie
     const nextIndex = currentIndex + 1;
 
     if (nextIndex >= filteredQuestions.length) {
-      router.push(`/resultat?score=${score}&total=${filteredQuestions.length}&topic=${topic.id}&type=${typeFilter}`);
+      const params = new URLSearchParams({
+        score: String(score),
+        total: String(filteredQuestions.length),
+        topic: topic.id,
+        type: typeFilter,
+        attempt: createAttemptId(),
+      });
+
+      router.push(`/resultat?${params.toString()}`);
       return;
     }
 

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BookOpenCheck, RotateCcw, Trophy } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { PrimaryLink } from "@/components/PrimaryLink";
+import { SaveQuizResult } from "@/components/SaveQuizResult";
 import { getResultMessage, getTopicById, normalizeQuestionTypeFilter, questionTypeFilterOptions } from "@/lib/quiz";
 
 type SearchParams = Record<string, string | string[] | undefined>;
@@ -22,9 +23,10 @@ function readText(value: string | string[] | undefined): string | undefined {
 
 export default async function ResultPage({ searchParams }: ResultPageProps) {
   const params = await searchParams;
-  const score = readNumber(params.score);
   const total = readNumber(params.total);
+  const score = total > 0 ? Math.min(readNumber(params.score), total) : readNumber(params.score);
   const topicId = readText(params.topic);
+  const attemptId = readText(params.attempt);
   const typeFilter = normalizeQuestionTypeFilter(readText(params.type));
   const topic = topicId ? getTopicById(topicId) : undefined;
   const resultMessage = getResultMessage(score, total);
@@ -32,6 +34,7 @@ export default async function ResultPage({ searchParams }: ResultPageProps) {
     ? `/quiz/${topic.id}${typeFilter === "all" ? "" : `?type=${typeFilter}`}`
     : "/amnen";
   const filterLabel = questionTypeFilterOptions.find((option) => option.value === typeFilter)?.label;
+  const resultMode = [topic?.title ?? "Okänt ämne", filterLabel].filter(Boolean).join(" · ");
 
   return (
     <PageShell>
@@ -64,10 +67,10 @@ export default async function ResultPage({ searchParams }: ResultPageProps) {
 
       <section className="mx-auto flex w-full max-w-2xl items-start gap-3 rounded-lg border border-ink/10 bg-white/75 p-4 text-left text-sm leading-6 text-ink/70">
         <BookOpenCheck aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-moss" />
-        <p>
-          Resultatet sparas inte ännu. Frågorna ligger lokalt i projektet och kan byggas ut med fler ämnen eller ett
-          mer avancerat provläge senare.
-        </p>
+        <div className="grid flex-1 gap-3">
+          <p>Frågorna ligger lokalt i projektet och resultatet sparas i Supabase när du är inloggad.</p>
+          <SaveQuizResult attemptId={attemptId} score={score} total={total} mode={resultMode} />
+        </div>
       </section>
     </PageShell>
   );
