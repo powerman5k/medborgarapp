@@ -56,6 +56,7 @@ export function ExamClient({
   const currentQuestion = examQuestions[currentIndex];
   const answeredCount = Object.keys(answers).length;
   const progress = examQuestions.length > 0 ? Math.round((answeredCount / examQuestions.length) * 100) : 0;
+  const isLastQuestion = currentIndex === examQuestions.length - 1;
 
   function finishExam() {
     if (hasFinishedRef.current) {
@@ -194,14 +195,16 @@ export function ExamClient({
             <ArrowRight aria-hidden="true" className="h-4 w-4" />
           </button>
         </div>
-        <button
-          type="button"
-          onClick={finishExam}
-          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-moss px-5 py-3 text-sm font-semibold text-white transition hover:bg-ink focus:outline-none focus:ring-4 focus:ring-leaf/25"
-        >
-          <Send aria-hidden="true" className="h-4 w-4" />
-          Lämna in
-        </button>
+        {isLastQuestion ? (
+          <button
+            type="button"
+            onClick={finishExam}
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-moss px-5 py-3 text-sm font-semibold text-white transition hover:bg-ink focus:outline-none focus:ring-4 focus:ring-leaf/25"
+          >
+            <Send aria-hidden="true" className="h-4 w-4" />
+            Lämna in
+          </button>
+        ) : null}
       </div>
     </section>
   );
