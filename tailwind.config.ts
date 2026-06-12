@@ -10,15 +10,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#16201a",
-        moss: "#25513f",
-        leaf: "#2f7a52",
-        mist: "#eef5f1",
-        wheat: "#f4c765",
-        skysoft: "#cbe5ee",
+        ink: "#f7fbff",
+        moss: "#67e8f9",
+        leaf: "#34d399",
+        mist: "#141a17",
+        wheat: "#f7c35f",
+        skysoft: "#8b5cf6",
       },
       boxShadow: {
-        soft: "0 18px 50px rgba(21, 40, 30, 0.12)",
+        soft: "0 24px 70px rgba(0, 0, 0, 0.34)",
       },
     },
   },

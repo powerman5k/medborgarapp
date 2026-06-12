@@ -11,9 +11,9 @@ export default async function SubjectsPage() {
     <PageShell>
       <section className="max-w-3xl">
         <p className="text-sm font-bold uppercase tracking-[0.18em] text-moss">Välj ämne</p>
-        <h1 className="mt-3 text-3xl font-black text-ink sm:text-4xl">Vad vill du öva på?</h1>
-        <p className="mt-4 text-base leading-7 text-ink/70">
-          Börja med ett område i taget. Varje quiz visar direkt om svaret är rätt eller fel och ger en kort förklaring.
+        <h1 className="mt-3 text-4xl font-black text-ink sm:text-5xl">Vad vill du öva på?</h1>
+        <p className="mt-4 text-base leading-7 text-ink/65">
+          Bli varm i ett område i taget. Varje quiz ger snabb återkoppling och en kort förklaring som hjälper dig minnas.
         </p>
       </section>
 

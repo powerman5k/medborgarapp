@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 * {
@@ -18,12 +18,41 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(203, 229, 238, 0.85), transparent 34rem),
-    linear-gradient(135deg, #f7fbf8 0%, #eff7f3 48%, #fdf9ed 100%);
-  color: #16201a;
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(135deg, #0a0b10 0%, #141a17 34%, #092522 67%, #19110b 100%);
+  background-attachment: fixed;
+  background-size: 44px 44px, 44px 44px, auto;
+  color: #f7fbff;
 }
 
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(103, 232, 249, 0.35);
+  color: #ffffff;
+}
+
+input,
+textarea,
+select {
+  color-scheme: dark;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(247, 251, 255, 0.38);
+}
+
+[class~="bg-white"],
+[class*="bg-white/"] {
+  background-color: rgba(255, 255, 255, 0.075) !important;
+  backdrop-filter: blur(22px);
+}
+
+.bg-moss.text-white {
+  color: #071015 !important;
 }
