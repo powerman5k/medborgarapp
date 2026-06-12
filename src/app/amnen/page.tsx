@@ -1,9 +1,11 @@
 import { PageShell } from "@/components/PageShell";
 import { SubjectCard } from "@/components/SubjectCard";
-import { getTopicsWithCounts } from "@/lib/quiz";
+import { getTopicsWithCounts } from "@/lib/question-bank";
 
-export default function SubjectsPage() {
-  const topics = getTopicsWithCounts();
+export const dynamic = "force-dynamic";
+
+export default async function SubjectsPage() {
+  const topics = await getTopicsWithCounts();
 
   return (
     <PageShell>

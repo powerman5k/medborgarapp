@@ -2,10 +2,12 @@ import Image from "next/image";
 import { BookOpen, CheckCircle2, Sparkles } from "lucide-react";
 import { HomeActions } from "@/components/HomeActions";
 import { PageShell } from "@/components/PageShell";
-import { getQuizStats } from "@/lib/quiz";
+import { getQuizStats } from "@/lib/question-bank";
 
-export default function Home() {
-  const { totalQuestions, totalTopics } = getQuizStats();
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const { totalQuestions, totalTopics } = await getQuizStats();
 
   return (
     <PageShell>
@@ -22,7 +24,7 @@ export default function Home() {
             Öva ämne för ämne med tydliga flervalsfrågor, direkt återkoppling och korta förklaringar efter varje svar.
           </p>
 
-          <HomeActions statsText={`${totalTopics} ämnen · ${totalQuestions} lokala frågor`} />
+          <HomeActions statsText={`${totalTopics} ämnen · ${totalQuestions} frågor`} />
         </div>
 
         <div className="relative mx-auto w-full max-w-xl">
@@ -47,7 +49,7 @@ export default function Home() {
         <div className="rounded-lg border border-ink/10 bg-white/80 p-4">
           <CheckCircle2 aria-hidden="true" className="h-5 w-5 text-leaf" />
           <p className="mt-3 text-2xl font-black text-ink">{totalQuestions}</p>
-          <p className="text-sm text-ink/65">frågor i lokal datafil</p>
+          <p className="text-sm text-ink/65">frågor totalt</p>
         </div>
         <div className="rounded-lg border border-ink/10 bg-white/80 p-4">
           <Sparkles aria-hidden="true" className="h-5 w-5 text-wheat" />

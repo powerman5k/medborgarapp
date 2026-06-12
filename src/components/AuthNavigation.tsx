@@ -8,7 +8,7 @@ import { useAuthSession } from "@/lib/supabase/use-auth-session";
 const linkClass =
   "rounded-full px-3 py-2 hover:bg-white hover:text-ink focus:outline-none focus:ring-4 focus:ring-leaf/20";
 
-const protectedPaths = ["/dashboard", "/prov", "/feltraning"];
+const protectedPaths = ["/dashboard", "/prov", "/feltraning", "/admin"];
 
 export function AuthNavigation() {
   const pathname = usePathname();

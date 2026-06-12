@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { BarChart3, CalendarDays, ClipboardCheck, LogOut, ShieldCheck, Target } from "lucide-react";
+import { BarChart3, CalendarDays, ClipboardCheck, LogOut, Settings, ShieldCheck, Target } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { createClient } from "@/lib/supabase/server";
 import { logout } from "./actions";
@@ -41,6 +41,7 @@ export default async function DashboardPage() {
   let userId: string | null = null;
   let quizResults: QuizResultRow[] = [];
   let quizResultsError: string | null = null;
+  let isAdmin = false;
 
   try {
     const { data, error } = await supabase.auth.getUser();
@@ -75,6 +76,16 @@ export default async function DashboardPage() {
     } catch (error) {
       console.error("Supabase quiz results lookup failed", error);
       quizResultsError = "Resultaten kunde inte hämtas just nu.";
+    }
+
+    try {
+      const { data, error } = await supabase.rpc("is_admin");
+
+      if (!error) {
+        isAdmin = Boolean(data);
+      }
+    } catch (error) {
+      console.error("Supabase admin role lookup failed", error);
     }
   }
 
@@ -127,6 +138,15 @@ export default async function DashboardPage() {
               <ClipboardCheck aria-hidden="true" className="h-4 w-4" />
               Provläge
             </Link>
+            {isAdmin ? (
+              <Link
+                href="/admin"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/10 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-mist focus:outline-none focus:ring-4 focus:ring-leaf/20"
+              >
+                <Settings aria-hidden="true" className="h-4 w-4" />
+                Admin
+              </Link>
+            ) : null}
           </div>
         </div>
       </section>

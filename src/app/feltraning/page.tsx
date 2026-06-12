@@ -4,12 +4,15 @@ import { ArrowLeft, Target } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { PrimaryLink } from "@/components/PrimaryLink";
 import { QuizClient } from "@/components/QuizClient";
-import { getQuestionsByIds, wrongAnswersTopic } from "@/lib/quiz";
+import { getQuestionsByIds } from "@/lib/question-bank";
+import { wrongAnswersTopic } from "@/lib/quiz";
 import { createClient } from "@/lib/supabase/server";
 
 type WrongAnswerRow = {
   question_id: number;
 };
+
+export const dynamic = "force-dynamic";
 
 export default async function WrongAnswerTrainingPage() {
   const supabase = await createClient();
@@ -59,7 +62,7 @@ export default async function WrongAnswerTrainingPage() {
     errorMessage = "Frågorna kunde inte hämtas just nu.";
   }
 
-  const questions = getQuestionsByIds(questionIds);
+  const questions = await getQuestionsByIds(questionIds);
 
   return (
     <PageShell>

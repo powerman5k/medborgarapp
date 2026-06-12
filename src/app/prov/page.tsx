@@ -3,8 +3,10 @@ import { redirect } from "next/navigation";
 import { ArrowLeft, ClipboardCheck } from "lucide-react";
 import { ExamClient } from "@/components/ExamClient";
 import { PageShell } from "@/components/PageShell";
-import { questions } from "@/data/questions";
+import { getAllQuestions } from "@/lib/question-bank";
 import { createClient } from "@/lib/supabase/server";
+
+export const dynamic = "force-dynamic";
 
 export default async function ExamPage() {
   const supabase = await createClient();
@@ -20,6 +22,8 @@ export default async function ExamPage() {
   if (!isAuthenticated) {
     redirect("/login?message=Logga in för att starta provläget och spara resultatet.");
   }
+
+  const questions = await getAllQuestions();
 
   return (
     <PageShell>

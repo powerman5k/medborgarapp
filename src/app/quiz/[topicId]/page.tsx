@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { QuizClient } from "@/components/QuizClient";
-import { getAllTopics, getQuestionsByTopic, getTopicById, normalizeQuestionTypeFilter } from "@/lib/quiz";
+import { getQuestionsByTopic } from "@/lib/question-bank";
+import { getAllTopics, getTopicById, normalizeQuestionTypeFilter } from "@/lib/quiz";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
@@ -13,6 +14,8 @@ type QuizPageProps = {
   }>;
   searchParams: Promise<SearchParams>;
 };
+
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return getAllTopics().map((topic) => ({
@@ -33,7 +36,7 @@ export default async function QuizPage({ params, searchParams }: QuizPageProps) 
     notFound();
   }
 
-  const questions = getQuestionsByTopic(topic.id);
+  const questions = await getQuestionsByTopic(topic.id);
   const initialFilter = normalizeQuestionTypeFilter(readText(query.type));
 
   return (
